@@ -12,13 +12,13 @@ body{
 }
 .col-left{
 	width: 200px;
-	height: 100vh;
+	height: 90vh;
 	background-color: #C8FC98;
 	float: left;
 }
 .col-right{
 	width: 200px;
-	height: 100vh;
+	height: 90vh;
 	background-color: #FFFF80;
 	float: right;
 }
@@ -29,7 +29,7 @@ body{
 	float: left;
 }
 .col-main{
-	height: 100vh;
+	height: 100%;
 	content: fluid;
 }
 .col-main-2-3{
@@ -247,6 +247,17 @@ body{
 	height: 20px;
 	background-color: bisque;
 }
+
+#footer-black{
+	text-align: center;
+	color:yellow;
+	background-color: black;
+	clear:both;
+}
+#link{
+	color:yellow;
+}
+
 @media screen and (max-width:600px) {
 	.list-2-14{
 		margin:30px 0 30px 0;
