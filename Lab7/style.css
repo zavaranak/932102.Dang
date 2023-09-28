@@ -6,3 +6,24 @@
     border: 1px black solid;
     position:absolute;
 }
+.circle{
+    background-color: green;
+    border: 1px black solid;
+    position: absolute;
+    border-radius: 50%;
+}
+.triangle{
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-bottom:  blue solid ;
+    border-right:  solid transparent ;
+    border-left:  solid transparent ;
+}
+
+.circle:hover,.square:hover{
+    background-color: yellow;
+}
+.triangle:hover{
+    border-bottom:yellow solid;
+}
