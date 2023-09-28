@@ -1,0 +1,8 @@
+.canvas{
+    padding:50px;
+}
+.square{
+    background-color: red;
+    border: 1px black solid;
+    position:absolute;
+}
