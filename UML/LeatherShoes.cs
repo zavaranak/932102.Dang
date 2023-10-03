@@ -1,15 +1,16 @@
-class Manuefacturer(){
+class Manufacturer{
     public string brand;
     public string location;
-    private int finance;
+    public int finance;
 
     private Supplier S; 
     public  Product[] products;
     public  Source[] sources;
 
-    public  int Demand(int codeSupply){};
+    private  int Demand(int codeSupply){};
     //Получить сырьё, снять деньги из капитала
-    public void getSupply(){      
+    public void getSupply(){ 
+        S = new Supplier;     
         foreach(Source source in sources){
             int demand = Demand(source.materialCode);
             S.deviverSuplies();
@@ -20,46 +21,47 @@ class Manuefacturer(){
     public void Produce(int productCode, int quantity){
         Product x = findProduct(productCode);                                   //Нахождение
         if (x == null) break;
-        foreach(Material component in x.component){
-            downSource(component.materialCode, component.quantity)              //снять сыре в запасе
+        foreach(Raw component in x.component){
+            downSource(component.materialCode, component.unit)              //снять сыре в запасе
         }
         x.quantity += quantity;                                                 //+количество продукта
     }
 
-    public Product findProduct(int code){
+    private Product findProduct(int code){
         foreach(Product product in products){
             if (product.productCode == code) {return product;}
         }
         return null;
     }
-    public Source findSource(int code){
+    private Source findSource(int code){
         foreach(Source source in sources){
             if (source.materialCodeode == code) {return source;}
         }
         return null;
     }
-    public void downSource(int code, int quantity){
+    private void downSource(int code, int quantity){
         Source forX = findSource(code);
         forX.quantity -= quantity;
     }
 }
-class Product(){
+class Product{
     public int productCode;
-    public string ProductName;
+    public string productName;
     public int quantity;
-    public Source[] components;
+    public Raw[] components;
+    private int produceCost;
     //установить цену продукта
-    public int setPrice(int ManuefacturerCost){
+    public int setPrice(int produceCost){
         int price;
-        foreach(Material component in components){
-            price += component.cost;
+        foreach(Raw component in components){
+            price += component.cost*component.unit;
         }
-        return price + ManuefacturerCost;
+        return price + produceCost;
     };
 
 }
 
-class Material(){
+class Material{
     public int materialCode;
     public string materialName;
     public int cost;
@@ -68,25 +70,27 @@ class Material(){
 class Source:Material{
     int quantity;
 }
-
-class Supplier(){
-    public int bill;
-    public void deliverSupply(Source Supply, int demand){
-        foreach(Source supply in supplies){
-            supply.quantity = demand;
-            bill += supply.cost * demand;
-        }
-    };
+class Raw:Material{
+    int unit;
 }
 
+class Supplier{
+    public string nameSupplier;
+    public int bill;
+    public void deliverSupply(Source supply, int demand){
+            supply.quantity = demand;
+            bill += supply.cost * demand;
+    }
+}
 
-class Distributor(){
+class Distributor{
+    public string nameDistributor;
     public int finance;
     public Product[] productsDistributor;
     public float profit = 0.2;                              //20% наценки
     public Retail[] Retailers;
     public int distributorDemand(int codeProduct);
-    public void getProduct(Manuefacturer M)
+    public void getProduct(Manufacturer M)
     {   
         int bill;
         foreach(Product product in M.products)
@@ -98,7 +102,7 @@ class Distributor(){
                     productD+=demand;
                 }
             }
-            bill+=product.cost*demand;
+            bill+=product.setPrice*demand;
         }
         M.finance+=bill;                //Платить производителю за продукты
         finance -= bill;                
@@ -110,17 +114,17 @@ class Distributor(){
         fromRetail.quantity+=quantity;
         Product toRetail = findProductD(codeProduct);
         toRetail.quantity-=quantity;                                             //Снять продукты при продажа
-        int bill = toRetail.cost*quantity + (toRetail.cost*quantity)*profit;     //Прибыль у Распределителя           
+        int bill = toRetail.setPrice*quantity + (toRetail.setPrice*quantity)*profit;     //Прибыль у Распределителя           
         finance += bill;                                                        
     }
 
-    public Product findProductD(int code){
+    private Product findProductD(int code){
         foreach(Product productD in productsDistributor){
             if (productD.productCode == code) {return productD;}
         }
         return null;
     }
-    public Retail findRetail(int code){
+    private Retail findRetail(int code){
      foreach(Retail Retailer in Retailers){
             if (Retailer.codeRetail == code) {return Retailer;}
         }
@@ -128,12 +132,12 @@ class Distributor(){
     }
 }
 
-class Retail(){
+class Retail{
     public int codeRetail;
     public string addressRetail;
-    public Product[] ProductInStock;
+    public Product[] productInStock;
     public Product findProductR(int code){
-        foreach(Product productR in ProductInStock){
+        foreach(Product productR in productInStock){
             if(productR.codeProduct==code) {return ProductR;}
         }
         return null;
