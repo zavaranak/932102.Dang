@@ -2,20 +2,17 @@ class Manufacturer{
     public string brand;
     public string location;
     public int finance;
-
-    private Supplier S; 
     public  Product[] products;
     public  Source[] sources;
 
     private  int Demand(int codeSupply){};
     //Получить сырьё, снять деньги из капитала
-    public void getSupply(){ 
-        S = new Supplier;     
-        foreach(Source source in sources){
-            int demand = Demand(source.materialCode);
-            S.deviverSuplies();
-            finance -= S.bill;
-        }
+    public void getSupply(int codeSupply, Supplier S){      
+            x = findSource(codeSupply)       
+            int demand = Demand(x.materialCode);
+            S.deviverSuplies(demand);
+            x.quantity+=demand;
+            finance -= S.bill;    
     }
     //Нахождение продукт, увеличить его количество в вкладе, и снять сырья для производства
     public void Produce(int productCode, int quantity){
@@ -77,10 +74,11 @@ class Raw:Material{
 class Supplier{
     public string nameSupplier;
     public int bill;
-    public void deliverSupply(Source supply, int demand){
-            supply.quantity = demand;
-            bill += supply.cost * demand;
-    }
+    private Source supply;
+    public void deliverSupply(int demand){
+            supply.quantity -= demand;
+            bill += suplly.cost * demand;
+    }S
 }
 
 class Distributor{
