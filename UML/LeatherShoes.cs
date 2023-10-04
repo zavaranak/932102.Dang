@@ -88,7 +88,7 @@ class Distributor{
     public int finance;
     public Product[] productsDistributor;
     public float profit = 0.2;                              //20% наценки
-    public Retail[] Retailers;
+    public Retail[] retailers;
     public int distributorDemand(int codeProduct);
     public void getProduct(Manufacturer M)
     {   
@@ -125,8 +125,8 @@ class Distributor{
         return null;
     }
     private Retail findRetail(int code){
-     foreach(Retail Retailer in Retailers){
-            if (Retailer.codeRetail == code) {return Retailer;}
+     foreach(Retail retailer in retailers){
+            if (retailer.codeRetail == code) {return retailer;}
         }
         return null;
     }
