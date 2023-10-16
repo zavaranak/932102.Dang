@@ -87,19 +87,18 @@ class Distributor{
     public Product[] productsDistributor;
     public float profit = 0.2;                              //20% наценки
     public Retail[] retailers;
-    public int distributorDemand(int codeProduct);
+    public int distributorDemand(Product p) ;
     public void getProduct(Manufacturer M)
     {   
-        int bill;
+        int bil = 0;
         foreach(Product product in M.products)
         {   
-            int demand = distributorDemand(product.codeProduct);                //Снят продукты из Производителя
+            int demand = distributorDemand(product);                //Снят продукты из Производителя
             product.quantity-=demand;
-            foreach(Product productD in productsDistributor){
-                if (productsDistributor.codeProduct==product.codeProduct){      //Увеличивать продукты у Распределителя
-                    productD+=demand;
-                }
-            }
+            Product product D = findProductD(product.productCode)
+                //Увеличивать продукты у Распределителя
+            productD+=demand;    
+        }
             bill+=product.setPrice*demand;
         }
         M.finance+=bill;                //Платить производителю за продукты
