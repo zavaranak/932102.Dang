@@ -1,0 +1,50 @@
+.container {
+  border: #3a81f5 3px solid;
+  width: 200px;
+  height: 200px;
+  padding: 10px; }
+
+.display {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 3px; }
+
+#storedValue {
+  color: #C0D6E4;
+  width: auto;
+  float: right; }
+
+.input {
+  overflow: hidden;
+  width: auto;
+  float: right;
+  height: 2em;
+  text-align: right;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  margin-right: 3px;
+  float: right; }
+
+.controller {
+  display: flex; }
+
+table {
+  border-spacing: 5px; }
+
+tr td {
+  padding: 3px; }
+
+.but, #doMath, #clear, #delete {
+  width: 33.5px;
+  height: 33.5px;
+  background: #dfeaf1;
+  text-align: center;
+  font-weight: 1000; }
+
+.butnum {
+  width: 33.5px;
+  height: 33.5px;
+  background: #dfeaf1;
+  text-align: center;
+  font-weight: 1000; }
