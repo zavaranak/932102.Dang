@@ -33,7 +33,8 @@ table {
   border-spacing: 5px; }
 
 tr td {
-  padding: 3px; }
+  padding: 3px;
+  box-sizing: border-box; }
 
 .but, #doMath, #clear, #delete {
   width: 33.5px;
