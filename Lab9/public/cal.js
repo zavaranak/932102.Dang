@@ -5,6 +5,9 @@ const execute = document.getElementById('doMath')
 const clear = document.getElementById('clear')
 const storedValue = document.getElementById(`storedValue`)
 const del = document.getElementById('delete')
+const tds = document.getElementsByTagName('td')
+
+var temp
 var operator = null
 var number1 = null
 var number2 = null
@@ -14,20 +17,24 @@ var mathContinue = true
 var length = numbs.length
 var length2 = mathOperators.length
 
-del.addEventListener('click',()=>{screen.value= screen.value.slice(0,-1)})
-execute.addEventListener('click',()=>executeMath())
-clear.addEventListener('click',()=>clearMath())
+
+del.addEventListener('click',function(){screen.value= screen.value.slice(0,-1),highLight(this)})
+execute.addEventListener('click',function(){executeMath(),highLight(this)})
+clear.addEventListener('click',function(){clearMath(),highLight(this)})
+
 
 for(var i =0; i<length;i++){
-        numbs[i].addEventListener('click',(event)=>{
+        numbs[i].addEventListener('click',function(event){
             var numb = (event.target.textContent)    
             putIntoScreen(numb)       
+            highLight(this)
         }) 
     }
     
 for(var i =0; i<length2;i++){
-        mathOperators[i].addEventListener('click',(event)=>{          
+        mathOperators[i].addEventListener('click',function(event){          
             getOperator(event)
+            highLight(this)
         }) 
     }
 
@@ -95,6 +102,14 @@ function executeMath(){
     if ((number2 !==null)&&(operator!==null))
         mathDone()
  }
+function highLight(button){
+    if (temp) temp.style.border="none"
+    button.style.border = "2px solid blue"
+    temp = button
+}
+
+
+
 
 
 
