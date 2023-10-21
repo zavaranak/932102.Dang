@@ -1,0 +1,46 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        title Lab9
+    body 
+        main 
+            .container 
+                .cal
+                    .display 
+                        span(id="storedValue") 
+                        input(class="input" id="screen" type="text" default)
+                    .controller 
+                        table
+                            tr
+                                td.butnum 7
+                                td.butnum 8
+                                td.butnum 9
+                                
+                            tr 
+                                td.butnum 4
+                                td.butnum 5
+                                td.butnum 6
+                            tr 
+                                td.butnum 1
+                                td.butnum 2
+                                td.butnum 3
+                            tr  
+                                td(class="butnum", colspan ="2") 0
+                                td.butnum .
+                        table
+                            tr 
+                                td.but /
+                                td(id="clear") C
+                            tr 
+                                td.but *
+                                td(id="delete") &larr;
+                            tr 
+                                td.but -
+                                td(id="doMath" rowspan ="2") =
+                            tr                                
+                                td.but +
+        script(src="cal.js")
+                
+                            

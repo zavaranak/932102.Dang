@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <title>Lab9</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="cal">
+                <div class="display"> <span id="storedValue"> </span>
+                    <input class="input" id="screen" type="text" placeholder="0"/>
+                </div>
+                <div class="controller">
+                    <table>
+                        <tr>
+                            <td class="butnum">7</td>
+                            <td class="butnum">8</td>
+                            <td class="butnum">9</td>
+                        </tr>
+                        <tr>
+                            <td class="butnum">4</td>
+                            <td class="butnum">5</td>
+                            <td class="butnum">6</td>
+                        </tr>
+                        <tr>
+                            <td class="butnum">1</td>
+                            <td class="butnum">2</td>
+                            <td class="butnum">3</td>
+                        </tr>
+                        <tr>
+                            <td class="butnum" colspan="2">0</td>
+                            <td class="butnum">.</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="but">/</td>
+                            <td id="clear">C</td>
+                        </tr>
+                        <tr>
+                            <td class="but">*</td>
+                            <td id="delete">&larr;</td>
+                        </tr>
+                        <tr>
+                            <td class="but">-</td>
+                            <td id="doMath" rowspan="2">=</td>
+                        </tr>
+                        <tr>
+                            <td class="but">+</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="public/cal.js"></script>
+</body>
+
+</html>
