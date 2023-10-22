@@ -42,17 +42,27 @@ function showStoredValue(){
     storedValue.textContent = `${number1}` + operator
 }
 function getOperator(event){          
+        var temp = event.target.textContent
+
         if (operator !== null) mathContinue = true    
-        if ((number1!==null)&&(mathContinue)){
-            number2 = parseFloat(screen.value)
-            number1 = doMath()
-        } 
-        else(
-            number1 = screen.value
-        )
-        operator = (event.target.textContent)    
-        screen.value = ''
-        showStoredValue()
+
+            if ((temp=='-')&&(operator!==null)){                    //Если - не опрератор, но отметка отрицательного числа 
+                screen.value+=temp
+            }  
+            else if ((number1!==null)&&(mathContinue)){             //Есть первое число, второе только что введён, но
+                number2 = parseFloat(screen.value)                  //не нажимать кпопу (=), а кнопку оператор, тогда надо
+                number1 = doMath()                                  //вычислить новое первое число = (первое число +-*/ второе число
+                screen.value = ''                                   
+                operator = temp    
+                showStoredValue()  
+            } 
+            else{                                                   //Если нет первого числа, то читать его из экрана
+                number1 = screen.value
+                screen.value = '' 
+                operator = temp    
+                showStoredValue()   
+            }
+                    
 }
 
 function putIntoScreen(but){
@@ -97,14 +107,13 @@ function doMath(){
     
 }
 function executeMath(){
-    console.log(number1,number2,mathContinue)
     number2 = parseFloat(screen.value)
     if ((number2 !==null)&&(operator!==null))
         mathDone()
  }
 function highLight(button){
     if (temp) temp.style.border="none"
-    button.style.border = "2px solid blue"
+    button.style.border = "1.5px solid blue"
     temp = button
 }
 
