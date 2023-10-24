@@ -98,7 +98,6 @@ class Distributor{
             Product product D = findProductD(product.productCode)
                 //Увеличивать продукты у Распределителя
             productD+=demand;    
-        }
             bill+=product.setPrice*demand;
         }
         M.finance+=bill;                //Платить производителю за продукты
