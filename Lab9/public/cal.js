@@ -51,7 +51,7 @@ function showStoredValue(){
 }
 function needChange(){
     var operator = tempstr[tempstr.length-1]
-    if ((operator=='+')||(operator=='/')||(operator=='*')) 
+    if (((operator=='+')||(operator=='/')||(operator=='*'))&&(screen.value == '')) 
     return true 
 }
 function getOperator(oper){    
@@ -63,8 +63,7 @@ function getOperator(oper){
         keepGoing = false
         alert(`Wrong Input`)}                
     if(keepGoing){
-        screen.value+=oper
-        tempstr = screen.value
+        tempstr += screen.value +oper
         screen.value = ''
         showStoredValue()
     }          
