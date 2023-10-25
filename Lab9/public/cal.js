@@ -7,15 +7,12 @@ const storedValue = document.getElementById(`storedValue`)
 const del = document.getElementById('delete')
 const tds = document.getElementsByTagName('td')
 
-var temp
-var operator = null
-var number1 = null
-var number2 = null
+var tempbut
+var tempstr = ''
 var result = null
-var tempOperator = null
-var mathContinue = true
 var length = numbs.length
 var length2 = mathOperators.length
+var mathEnd = false
 
 
 del.addEventListener('click',function(){screen.value= screen.value.slice(0,-1),highLight(this)})
@@ -24,47 +21,62 @@ clear.addEventListener('click',function(){clearMath(),highLight(this)})
 
 
 for(var i =0; i<length;i++){
-        numbs[i].addEventListener('click',function(event){
-            var numb = (event.target.textContent)    
-            putIntoScreen(numb)       
-            highLight(this)
-        }) 
-    }
+       
+    numbs[i].addEventListener('click',function(event){ 
+        if (mathEnd) {
+            screen.value =''
+            mathEnd = false
+        }
+        var numb = (event.target.textContent)    
+        putIntoScreen(numb)       
+        highLight(this)
+    }) 
+        
+}
     
 for(var i =0; i<length2;i++){
-        mathOperators[i].addEventListener('click',function(event){          
-            getOperator(event)
-            highLight(this)
-        }) 
-    }
-
-function showStoredValue(){
-    storedValue.textContent = `${number1}` + operator
-}
-function getOperator(event){          
+    mathOperators[i].addEventListener('click',function(event){
         var temp = event.target.textContent
+        mathEnd = false
 
-        if (operator !== null) mathContinue = true    
+        if ((tempstr!=='')&&(needChange())&&(temp!=='-')) changeOperator(temp)
+        else if ((tempstr)&&(temp=='-')) screen.value += temp
+        else getOperator(temp)
 
-            if ((temp=='-')&&(operator!==null)){                    //Если - не опрератор, но отметка отрицательного числа 
-                screen.value+=temp
-            }  
-            else if ((number1!==null)&&(mathContinue)){             //Есть первое число, второе только что введён, но
-                number2 = parseFloat(screen.value)                  //не нажимать кпопу (=), а кнопку оператор, тогда надо
-                number1 = doMath()                                  //вычислить новое первое число = (первое число +-*/ второе число
-                screen.value = ''                                   
-                operator = temp    
-                showStoredValue()  
-            } 
-            else{                                                   //Если нет первого числа, то читать его из экрана
-                number1 = screen.value
-                screen.value = '' 
-                operator = temp    
-                showStoredValue()   
-            }
-                    
+        highLight(this)
+    }) 
 }
-
+function showStoredValue(){
+    storedValue.textContent = tempstr
+}
+function needChange(){
+    var operator = tempstr[tempstr.length-1]
+    if ((operator=='+')||(operator=='/')||(operator=='*')) 
+    return true 
+}
+function getOperator(oper){    
+    var keepGoing
+    try{
+        var test = eval(screen.value)
+        keepGoing = true}
+    catch(error){
+        keepGoing = false
+        alert(`Wrong Input`)}                
+    if(keepGoing){
+        screen.value+=oper
+        tempstr = screen.value
+        screen.value = ''
+        showStoredValue()
+    }          
+}
+function changeOperator(oper){
+    console.log(`change ${tempstr[tempstr.length-1]} to ${oper}`)
+    var tempstr2 = tempstr
+    tempstr2 = tempstr.slice(0,-1)
+    tempstr2 += oper
+    tempstr = tempstr2 
+    showStoredValue()
+}
 function putIntoScreen(but){
     var input = but
     screen.value +=input
@@ -75,46 +87,26 @@ function clearMath(){
     result = null
     operator =null
     screen.value = ''
-}
-function mathDone(){
-    result = doMath()
-    tempOperator = operator
-    screen.value = result
-    number1 = result
-    number2 = null
-    operator = null
-    mathContinue=false
-    storedValue.textContent=''
-}
-function doMath(){  
-    number1 = parseFloat(number1)  
-    screen.value = ''
-    switch(operator){
-        case '+': 
-            result = number1+number2 
-            break
-        case '-':
-            result = number1-number2 
-            break
-        case '*':
-            result = number1*number2 
-            break
-        case '/':
-            result = number1/number2 
-            break         
-    }
-    return result
-    
+    storedValue.textContent = ''
+    tempstr = ''
 }
 function executeMath(){
-    number2 = parseFloat(screen.value)
-    if ((number2 !==null)&&(operator!==null))
-        mathDone()
+    var temp = screen.value
+    console.log(tempstr + temp)
+    try{
+        result = eval(tempstr+temp)}
+    catch(error){
+        alert('wrong input')
+    }
+    screen.value = result
+    tempstr=''
+    showStoredValue()
+    mathEnd = true
  }
 function highLight(button){
-    if (temp) temp.style.border="none"
+    if (tempbut) tempbut.style.border="none"
     button.style.border = "1.5px solid blue"
-    temp = button
+    tempbut = button
 }
 
 

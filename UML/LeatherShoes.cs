@@ -90,14 +90,14 @@ class Distributor{
     public int distributorDemand(Product p) ;
     public void getProduct(Manufacturer M)
     {   
-        int bil = 0;
+        int bill = 0;
         foreach(Product product in M.products)
         {   
             int demand = distributorDemand(product);                //Снят продукты из Производителя
             product.quantity-=demand;
             Product product D = findProductD(product.productCode)
                 //Увеличивать продукты у Распределителя
-            productD+=demand;    
+            productD.quantity+=demand;    
             bill+=product.setPrice*demand;
         }
         M.finance+=bill;                //Платить производителю за продукты
