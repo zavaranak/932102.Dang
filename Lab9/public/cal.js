@@ -90,17 +90,19 @@ function clearMath(){
     tempstr = ''
 }
 function executeMath(){
-    var temp = screen.value
-    console.log(tempstr + temp)
+    var temp = tempstr + screen.value
     try{
-        result = eval(tempstr+temp)}
+        temp = temp.replace('--','+')    
+        result = eval(temp)
+        screen.value = result
+        tempstr=''
+        showStoredValue()
+        mathEnd = true}
+
     catch(error){
         alert('wrong input')
     }
-    screen.value = result
-    tempstr=''
-    showStoredValue()
-    mathEnd = true
+    
  }
 function highLight(button){
     if (tempbut) tempbut.style.border="none"
