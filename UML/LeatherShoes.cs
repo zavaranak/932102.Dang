@@ -4,7 +4,7 @@ class Manufacturer{
     public int finance;
     public  Product[] products;
     public  Source[] sources;
-
+ва
     private  int Demand(int codeSupply){};
     //Получить сырьё, снять деньги из капитала
     public void getSupply(int codeSupply, Supplier S){      
