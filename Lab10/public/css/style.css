@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  background: black; }
+
+.container {
+  display: flex;
+  background: black;
+  flex-direction: column;
+  align-items: center; }
+
+.curtain {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s; }
+  .curtain:hover {
+    transform: translateY(-15%); }
+
+.lamp {
+  display: block;
+  margin: auto;
+  background-color: black; }
+
+.yellowLight {
+  pointer-events: none;
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 50px;
+  display: block;
+  border-bottom: 520px solid rgba(255, 255, 0, 0.4);
+  border-right: 330px solid transparent;
+  border-left: 330px solid transparent; }
+
+.insideMagicBox {
+  width: 300px;
+  height: 200px; }
+
+.insideHatBox {
+  width: 150px;
+  height: 100px; }
