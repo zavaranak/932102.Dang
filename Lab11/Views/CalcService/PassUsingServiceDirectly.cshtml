@@ -1,2 +1,8 @@
-@inject ICalcService _calcService
-<h1></h1>
+@inject ICalcService CalcService
+<title>@CalcService.GetTitle()</title>
+<h1>@CalcService.GetHeading()</h1>
+<script>
+    const numb1 = @CalcService.Getnumb1()
+    const numb2 = @CalcService.Getnumb2()
+</script>
+<script src="/js/caculate.js"></script>

@@ -9,13 +9,13 @@ header{
   color: whitesmoke;
 }
 .homediv{
-  font-size: 1.3em;
+  font-size: 1.5em;
   margin-left: -5%;
   margin-top:auto;
 }
 .backend1, .container, footer{
   margin-inline: 10%;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 a{
   color: rgb(0, 102, 255);
