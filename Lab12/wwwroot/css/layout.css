@@ -1,0 +1,23 @@
+body{
+  margin:0;
+}
+header{
+  background-color: black;
+  display: flex;
+}
+.backend1, .home{
+  color: whitesmoke;
+}
+.homediv{
+  font-size: 1.5em;
+  margin-left: -5%;
+  margin-top:auto;
+}
+.backend1, .container, footer{
+  margin-inline: 10%;
+  font-size: 2em;
+}
+a{
+  color: rgb(0, 102, 255);
+  text-decoration-line: none;
+}

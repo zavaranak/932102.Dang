@@ -1,0 +1,11 @@
+﻿@model Lab12.Models.HomeModel
+<title>@Model.Title</title>
+<h1>@Model.Heading</h1>
+<div>
+    <ul>
+        <li><a href="/CalcService/Manual">@Model.UsingActions[0]</a></li>
+        <li><a href="/CalcService/PassUsingViewData">@Model.UsingActions[1]</a></li>
+        <li><a href="/CalcService/PassUsingViewBag">@Model.UsingActions[2]</a></li>
+        <li><a href="/CalcService/PassUsingServiceDirectly">@Model.UsingActions[3]</a></li>
+    </ul>
+</div>

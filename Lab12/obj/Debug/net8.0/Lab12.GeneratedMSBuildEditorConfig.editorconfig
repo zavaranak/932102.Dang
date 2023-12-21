@@ -1,0 +1,55 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = true
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Lab12
+build_property.RootNamespace = Lab12
+build_property.ProjectDir = D:\Laboratories\WebTech\Lab12\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Laboratories\WebTech\Lab12
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Laboratories/WebTech/Lab12/Views/CalcService/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laboratories/WebTech/Lab12/Views/CalcService/Manual.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcTWFudWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laboratories/WebTech/Lab12/Views/CalcService/ManualWithSeperateHandlers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcTWFudWFsV2l0aFNlcGVyYXRlSGFuZGxlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laboratories/WebTech/Lab12/Views/CalcService/ModelBindingInSeperateModels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcTW9kZWxCaW5kaW5nSW5TZXBlcmF0ZU1vZGVscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laboratories/WebTech/Lab12/Views/CalcService/ModelBindingParameters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcTW9kZWxCaW5kaW5nUGFyYW1ldGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laboratories/WebTech/Lab12/Views/CalcService/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laboratories/WebTech/Lab12/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laboratories/WebTech/Lab12/Views/_ViewImport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laboratories/WebTech/Lab12/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
