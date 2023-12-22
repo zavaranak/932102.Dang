@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\css\\layout.css"
     },
     {
-      "Id": "D:\\Laboratories\\WebTech\\Lab12\\wwwroot\\js\\caculate.js",
-      "PackagePath": "staticwebassets\\js\\caculate.js"
-    },
-    {
       "Id": "D:\\Laboratories\\WebTech\\Lab12\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

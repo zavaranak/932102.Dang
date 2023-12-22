@@ -26,12 +26,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcTWFudWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Laboratories/WebTech/Lab12/Views/CalcService/ManualWithSeperateHandlers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcTWFudWFsV2l0aFNlcGVyYXRlSGFuZGxlcnMuY3NodG1s
+[D:/Laboratories/WebTech/Lab12/Views/CalcService/ManualWithSeparateHandlers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcTWFudWFsV2l0aFNlcGFyYXRlSGFuZGxlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Laboratories/WebTech/Lab12/Views/CalcService/ModelBindingInSeperateModels.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcTW9kZWxCaW5kaW5nSW5TZXBlcmF0ZU1vZGVscy5jc2h0bWw=
+[D:/Laboratories/WebTech/Lab12/Views/CalcService/ModelBindingInSeparateModels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcTW9kZWxCaW5kaW5nSW5TZXBhcmF0ZU1vZGVscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Laboratories/WebTech/Lab12/Views/CalcService/ModelBindingParameters.cshtml]
@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Laboratories/WebTech/Lab12/Views/CalcService/Result.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Laboratories/WebTech/Lab12/Views/CalcService/ResultModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY1NlcnZpY2VcUmVzdWx0TW9kZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Laboratories/WebTech/Lab12/Views/Shared/_Layout.cshtml]

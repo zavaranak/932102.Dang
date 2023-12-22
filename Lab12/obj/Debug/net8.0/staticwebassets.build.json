@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DMKEVZKwiLl7W24+bGkvWKZ27tDl7sVxzlTh3aNyyvM=",
+  "Hash": "Khi3Rj9EwsnEfLUbnjRca4FZgne5pyG2pdySOImhgCI=",
   "Source": "Lab12",
   "BasePath": "_content/Lab12",
   "Mode": "Default",
@@ -34,25 +34,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\layout.css"
-    },
-    {
-      "Identity": "D:\\Laboratories\\WebTech\\Lab12\\wwwroot\\js\\caculate.js",
-      "SourceId": "Lab12",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Laboratories\\WebTech\\Lab12\\wwwroot\\",
-      "BasePath": "_content/Lab12",
-      "RelativePath": "js/caculate.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\caculate.js"
     },
     {
       "Identity": "D:\\Laboratories\\WebTech\\Lab12\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
