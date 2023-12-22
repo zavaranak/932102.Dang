@@ -41,7 +41,7 @@ public class CalcServiceController : Controller
         };
         return View(modelHOME);
     }
-    ///SingleActions
+///SingleActions
     [HttpGet]
     public IActionResult Manual(){
     ViewBag.Title ="Manual - Backend2";
