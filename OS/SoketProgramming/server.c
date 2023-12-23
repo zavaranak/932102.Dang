@@ -10,10 +10,10 @@
 #define PORT 3000
 #define BACKLOG 5
 
-volatile sig_atomic_t  wasSigHup = 0;
+volatile sig_atomic_t  wasSigInt = 0;
 
-void sigHupHandler(int sigNumber) {
-     wasSigHup = 1;
+void sigIntHandler(int sigNumber) {
+     wasSigInt = 1;
 }
 
 int main() {
@@ -57,15 +57,15 @@ int main() {
     printf("Server started on port %d \n", PORT);
 
     // Signal handler registration
-    sigaction(SIGHUP, NULL, &sa);
-    sa.sa_handler = sigHupHandler;
+    sigaction(SIGINT, NULL, &sa);
+    sa.sa_handler = sigIntHandler;
     sa.sa_flags |= SA_RESTART;
-    sigaction(SIGHUP, &sa, NULL);
+    sigaction(SIGINT, &sa, NULL);
 
     // Setting up signal blocking
     sigemptyset(&blockedMask);
     sigemptyset(&origMask);
-    sigaddset(&blockedMask, SIGHUP);
+    sigaddset(&blockedMask, SIGINT);
     sigprocmask(SIG_BLOCK, &blockedMask, &origMask);
    
     while (signalOrConnectionCount < 3) {
@@ -83,10 +83,10 @@ int main() {
             exit(EXIT_FAILURE); 
         }
 
-        // Receiving SIGHUP signal check
-        if ( wasSigHup) {
-            printf("SIGHUP received.\n");
-             wasSigHup = 0;
+        // Receiving SIGINT signal check
+        if (wasSigInt) {
+            printf("SIGINT received.\n");
+             wasSigInt = 0;
             signalOrConnectionCount++;
             continue;
         }
