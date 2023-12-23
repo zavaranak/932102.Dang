@@ -10,10 +10,10 @@
 #define PORT 3000
 #define BACKLOG 5
 
-volatile sig_atomic_t sighupReceived = 0;
+volatile sig_atomic_t  wasSigHup = 0;
 
 void sigHupHandler(int sigNumber) {
-    sighupReceived = 1;
+     wasSigHup = 1;
 }
 
 int main() {
@@ -21,15 +21,15 @@ int main() {
     int incomingSocketFD = 0;                   //client Socket
     struct sockaddr_in socketAddress;           //internet adresss, port
     int addressLength = sizeof(socketAddress);  //used for request connection
-    fd_set readfds;
+    fd_set fds;
     struct sigaction sa;
     sigset_t blockedMask, origMask;
     char buffer[1024] = { 0 };
     int readBytes;
-    int maxSd;
+    int maxFd;
     int signalOrConnectionCount = 0;
 
-    // Socket creating
+    // Socket creating socket(domain,type,protocol)
     if ((serverFD = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         perror("create error");
         exit(EXIT_FAILURE);
@@ -41,7 +41,7 @@ int main() {
     socketAddress.sin_port = htons(PORT);       //Port
 
     // Socket binding to the address
-    // bind(serverFD, (struct sockaddr*)&socketAddress, sizeof(socketAddress))
+    //  bind(int sock, struct sock address, socket_length_adress)
     if (bind(serverFD, (struct sockaddr*)&socketAddress, sizeof(socketAddress)) < 0) {
         perror("bind error");
         exit(EXIT_FAILURE);
@@ -69,30 +69,30 @@ int main() {
     sigprocmask(SIG_BLOCK, &blockedMask, &origMask);
    
     while (signalOrConnectionCount < 3) {
-        FD_ZERO(&readfds); 
-        FD_SET(serverFD, &readfds); 
+        FD_ZERO(&fds); 
+        FD_SET(serverFD, &fds); 
         
         if (incomingSocketFD > 0) { 
-            FD_SET(incomingSocketFD, &readfds); 
+            FD_SET(incomingSocketFD, &fds); 
         } 
         
-        maxSd = (incomingSocketFD > serverFD) ? incomingSocketFD : serverFD; 
+        maxFd = (incomingSocketFD > serverFD) ? incomingSocketFD : serverFD; 
  
-        if (pselect(maxSd + 1, &readfds, NULL, NULL, NULL, &origMask) < 0 && errno != EINTR) { 
+        if (pselect(maxFd + 1, &fds, NULL, NULL, NULL, &origMask) < 0 && errno != EINTR) { 
             perror("pselect error"); 
             exit(EXIT_FAILURE); 
         }
 
         // Receiving SIGHUP signal check
-        if (sighupReceived) {
+        if ( wasSigHup) {
             printf("SIGHUP received.\n");
-            sighupReceived = 0;
+             wasSigHup = 0;
             signalOrConnectionCount++;
             continue;
         }
     
         // Reading incoming bytes
-        if (incomingSocketFD > 0 && FD_ISSET(incomingSocketFD, &readfds)) { 
+        if (incomingSocketFD > 0 && FD_ISSET(incomingSocketFD, &fds)) { 
             readBytes = read(incomingSocketFD, buffer, 1024);
 
             if (readBytes > 0) { 
@@ -110,7 +110,7 @@ int main() {
         }
         
         // Check of incoming connections
-        if (FD_ISSET(serverFD, &readfds)) {
+        if (FD_ISSET(serverFD, &fds)) {
             if ((incomingSocketFD = accept(serverFD, (struct sockaddr*)&socketAddress, (socklen_t*)&addressLength)) < 0) {
                 perror("accept error");
                 exit(EXIT_FAILURE);
