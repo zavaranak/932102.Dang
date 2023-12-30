@@ -1,0 +1,31 @@
+body{
+  margin:0;
+}
+header{
+  background-color: black;
+  display: flex;
+}
+.backend1, .home{
+  color: whitesmoke;
+}
+.homediv{
+  font-size: 1.5em;
+  margin-top:auto;
+  margin-left: 20px;
+}
+.backend1, .container, footer{
+  margin-left: 10%;
+  font-size: 2em;
+}
+a{
+  color: rgb(0, 102, 255);
+  text-decoration-line: none;
+}
+.inputBox{
+  height: 1em;font-size:0.8em;
+}
+.buttonSubmit{
+  height: 2em; width:4em; font-size:0.6em;
+  border-radius: 5px;
+  margin:1px;
+}

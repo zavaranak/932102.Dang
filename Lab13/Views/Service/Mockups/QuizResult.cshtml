@@ -1,0 +1,11 @@
+@model List<Lab13.Models.QuizModel>
+<title>Quiz Result - Backend3</title>
+<h1>QuizResult</h1>
+<h3>Right answers @ViewBag.TrueAns of @Model.Count() </h3>
+<div>
+    @{
+        foreach(var question in @Model){
+        <p>@question.numb1 @question.mathOperator @question.numb2 = @question.answer</p>
+        }
+    }
+</div>

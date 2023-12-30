@@ -1,0 +1,12 @@
+﻿@namespace Lab13.Views
+@model Lab13.Models.HomeModel
+<title>@Model.Title</title>
+<h1>@Model.Heading</h1>
+<div>
+    <ul>
+        <li><a href="/Service/Manual">@Model.UsingActions[0]</a></li>
+        <li><a href="/Service/ManualWithSeparateHandlers">@Model.UsingActions[1]</a></li>
+        <li><a href="/Service/ModelBindingParameters">@Model.UsingActions[2]</a></li>
+        <li><a href="/Service/ModelBindingInSeparateModels">@Model.UsingActions[3]</a></li>
+    </ul>
+</div>

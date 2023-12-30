@@ -1,0 +1,35 @@
+﻿<title>@ViewBag.Title</title>
+<h1>@ViewBag.Heading</h1>
+<div>
+    <form method="post" >
+    <input type="text" name="firstnum" required />
+    <br>
+    <select id="operator" name="operator" required onchange="getOperatorValue()">
+        <option value="plus">+</option>    
+        <option value="minus">-</option>
+        <option value="mult">*</option>
+        <option value="div">/</option>
+    </select>
+    <input type="hidden" id="selectedOperator" name="selectedOperator" value="plus" />
+    <br>
+    <input type="text" id="secondnum" name="secondnum" required onchange="checkVar()" />
+    <br>
+    <button type="submit" id='submit'>Submit</button>
+    </form>
+</div>
+<script>
+    const form = document.querySelector('form')
+    const submit = document.querySelector('#submit')
+    function getOperatorValue() {
+    document.querySelector('#selectedOperator').value = document.getElementById('operator').value;
+    }
+    function checkVar(){
+        var secondnum = document.getElementById('secondnum')
+        var divider = secondnum.value
+        if ((document.getElementById('operator').value == 'div')*(divider==0))
+        { alert('Делимое число равно нулю')
+          secondnum.value = ""
+        }
+    }
+</script>
+

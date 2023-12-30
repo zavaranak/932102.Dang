@@ -1,0 +1,13 @@
+@model Lab13.Models.AnswerModel
+<title>Hello Quiz - Backend3</title>
+<h1>Quiz</h1>
+<div>
+    <b>@ViewBag.numb1 @ViewBag.mathOperator @ViewBag.numb2 =</b>
+    @using (Html.BeginForm("Quiz", "Service", FormMethod.Post)){ 
+        @Html.TextBoxFor(m => m.answer, new {@class = "inputBox"});
+    <br>
+    <button formaction="/Mockups/Quiz" type="submit" class="buttonSubmit">Next</button>
+    <button formaction="/Mockups/QuizResult" type="submit" class="buttonSubmit" style="color:white; background-color:blue;">Finish</button>
+    }
+    <p style="color:red">@ViewBag.ErrorMessage</p>
+</div>
