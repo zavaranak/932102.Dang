@@ -1,0 +1,10 @@
+D:\Laboratories\Imitation Modelization\Flight\Flight\bin\Debug\Flight.exe.config
+D:\Laboratories\Imitation Modelization\Flight\Flight\bin\Debug\Flight.exe
+D:\Laboratories\Imitation Modelization\Flight\Flight\bin\Debug\Flight.pdb
+D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.csproj.AssemblyReference.cache
+D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.Form1.resources
+D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.Properties.Resources.resources
+D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.csproj.GenerateResource.cache
+D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.csproj.CoreCompileInputs.cache
+D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.exe
+D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.pdb
