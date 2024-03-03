@@ -29,6 +29,7 @@ namespace Flight
         private void buttonStop_Click(object sender, EventArgs e)
         {
             Clear();
+            timer1.Stop();
         }
 
        
@@ -82,6 +83,7 @@ namespace Flight
                 vx = v0 * cosa;
                 vy = v0 * sina;
                 chart1.Series[counter].Points.AddXY(x, y);
+                chart1.Series[counter].Name = "["+(counter+1).ToString()+"] Step:" + edStep.Value.ToString();
                 timer1.Start();
                 start = DateTime.Now;
             }
@@ -92,12 +94,12 @@ namespace Flight
             TextBox[] distanceText = { Distance1, Distance2, Distance3, Distance4, Distance5 };
             TextBox[] maxHeightText = { MH1, MH2, MH3, MH4, MH5 };
             TextBox[] endSpeedText = { EndSpeed1, EndSpeed2, EndSpeed3, EndSpeed4, EndSpeed5 };
-            for (int i = 0; i < counter; i++) {
+            for (int i = 0; i < 5; i++) {
                 chart1.Series[i].Points.Clear();
                 timeStepText[i].Text = ""; distanceText[i].Text = ""; maxHeightText[i].Text = ""; endSpeedText[i].Text = "";
+                chart1.Series[i].Name = (i + 1).ToString();
             }
             counter = 0;
-            
         }
     }
 }

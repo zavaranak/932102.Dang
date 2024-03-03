@@ -8,3 +8,13 @@ D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.csproj.Gen
 D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.csproj.CoreCompileInputs.cache
 D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.exe
 D:\Laboratories\Imitation Modelization\Flight\Flight\obj\Debug\Flight.pdb
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\bin\Debug\Flight.exe.config
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\bin\Debug\Flight.exe
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\bin\Debug\Flight.pdb
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\obj\Debug\Flight.csproj.AssemblyReference.cache
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\obj\Debug\Flight.Form1.resources
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\obj\Debug\Flight.Properties.Resources.resources
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\obj\Debug\Flight.csproj.GenerateResource.cache
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\obj\Debug\Flight.csproj.CoreCompileInputs.cache
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\obj\Debug\Flight.exe
+D:\Laboratories\DangGit\Imitation Modelization\Flight(Lab1)\Flight\obj\Debug\Flight.pdb
