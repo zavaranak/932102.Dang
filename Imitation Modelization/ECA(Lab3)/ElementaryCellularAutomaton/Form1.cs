@@ -104,7 +104,7 @@ namespace ElementaryCellularAutomaton
             //Mark first grid as Index
             dataGridView1[0, currentIndexRow].Value = (currentIndexRow + 1).ToString();
             //Paint color for grids with value 1
-            for (int i = 1; i < gridSize-1; i++) { 
+            for (int i = 1; i < gridSize; i++) { 
 
                 if (newRow[i-1] == 1) { dataGridView1.Rows[currentIndexRow].Cells[i].Style.BackColor = Color.Green; } 
             }
