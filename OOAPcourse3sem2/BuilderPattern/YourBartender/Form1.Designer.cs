@@ -110,7 +110,7 @@
             // comboBoxAlcohol
             // 
             comboBoxAlcohol.FormattingEnabled = true;
-            comboBoxAlcohol.Items.AddRange(new object[] { "Vodka", "Gin", "Rum" });
+            comboBoxAlcohol.Items.AddRange(new object[] { "Vodka", "Gin", "Rum", "Vodka ", "Vodka shot", "Tequila shot", "Rum shot", "Whiskey shot", "Gin shot" });
             comboBoxAlcohol.Location = new Point(13, 38);
             comboBoxAlcohol.Name = "comboBoxAlcohol";
             comboBoxAlcohol.Size = new Size(121, 23);
