@@ -1,0 +1,10 @@
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\bin\Debug\CafeSimulation.exe.config
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\bin\Debug\CafeSimulation.exe
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\bin\Debug\CafeSimulation.pdb
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\obj\Debug\CafeSimulation.csproj.AssemblyReference.cache
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\obj\Debug\CafeSimulation.Form1.resources
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\obj\Debug\CafeSimulation.Properties.Resources.resources
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\obj\Debug\CafeSimulation.csproj.GenerateResource.cache
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\obj\Debug\CafeSimulation.csproj.CoreCompileInputs.cache
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\obj\Debug\CafeSimulation.exe
+D:\Laboratories\DangGit\Imitation Modelization\Cafe(Lab7)\CafeSimulation\obj\Debug\CafeSimulation.pdb
