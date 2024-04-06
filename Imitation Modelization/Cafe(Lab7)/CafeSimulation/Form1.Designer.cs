@@ -33,27 +33,29 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.skill = new System.Windows.Forms.NumericUpDown();
+            this.pricinginput = new System.Windows.Forms.NumericUpDown();
+            this.competition = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.inventory = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.marketing = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.inventory = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.competition = new System.Windows.Forms.NumericUpDown();
-            this.pricinginput = new System.Windows.Forms.NumericUpDown();
-            this.skill = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skill)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pricinginput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.competition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marketing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.competition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pricinginput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skill)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,6 +75,94 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(807, 130);
             this.panel1.TabIndex = 0;
+            // 
+            // skill
+            // 
+            this.skill.DecimalPlaces = 1;
+            this.skill.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.skill.Location = new System.Drawing.Point(368, 85);
+            this.skill.Name = "skill";
+            this.skill.Size = new System.Drawing.Size(61, 20);
+            this.skill.TabIndex = 12;
+            // 
+            // pricinginput
+            // 
+            this.pricinginput.DecimalPlaces = 1;
+            this.pricinginput.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.pricinginput.Location = new System.Drawing.Point(368, 59);
+            this.pricinginput.Name = "pricinginput";
+            this.pricinginput.Size = new System.Drawing.Size(61, 20);
+            this.pricinginput.TabIndex = 11;
+            // 
+            // competition
+            // 
+            this.competition.DecimalPlaces = 1;
+            this.competition.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.competition.Location = new System.Drawing.Point(368, 30);
+            this.competition.Name = "competition";
+            this.competition.Size = new System.Drawing.Size(61, 20);
+            this.competition.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(240, 89);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Employee skill";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(240, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Pricing";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(240, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Market competition";
+            // 
+            // inventory
+            // 
+            this.inventory.DecimalPlaces = 1;
+            this.inventory.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.inventory.Location = new System.Drawing.Point(134, 61);
+            this.inventory.Name = "inventory";
+            this.inventory.Size = new System.Drawing.Size(61, 20);
+            this.inventory.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Inventory expense";
             // 
             // marketing
             // 
@@ -119,14 +209,26 @@
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
-            series1.Name = "Cost";
+            series1.Name = "Employee";
             series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Legend = "Legend1";
-            series2.Name = "Revenue";
+            series2.Name = "Capital";
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Order";
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "task";
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(793, 483);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
@@ -134,94 +236,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Inventory expense";
-            // 
-            // inventory
-            // 
-            this.inventory.DecimalPlaces = 1;
-            this.inventory.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.inventory.Location = new System.Drawing.Point(134, 61);
-            this.inventory.Name = "inventory";
-            this.inventory.Size = new System.Drawing.Size(61, 20);
-            this.inventory.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(240, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Market competition";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(240, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Pricing";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(240, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Employee skill";
-            // 
-            // competition
-            // 
-            this.competition.DecimalPlaces = 1;
-            this.competition.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.competition.Location = new System.Drawing.Point(368, 30);
-            this.competition.Name = "competition";
-            this.competition.Size = new System.Drawing.Size(61, 20);
-            this.competition.TabIndex = 10;
-            // 
-            // pricinginput
-            // 
-            this.pricinginput.DecimalPlaces = 1;
-            this.pricinginput.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.pricinginput.Location = new System.Drawing.Point(368, 59);
-            this.pricinginput.Name = "pricinginput";
-            this.pricinginput.Size = new System.Drawing.Size(61, 20);
-            this.pricinginput.TabIndex = 11;
-            // 
-            // skill
-            // 
-            this.skill.DecimalPlaces = 1;
-            this.skill.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.skill.Location = new System.Drawing.Point(368, 85);
-            this.skill.Name = "skill";
-            this.skill.Size = new System.Drawing.Size(61, 20);
-            this.skill.TabIndex = 12;
             // 
             // Form1
             // 
@@ -234,12 +248,12 @@
             this.Text = "Cafe";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skill)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pricinginput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.competition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marketing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.competition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pricinginput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skill)).EndInit();
             this.ResumeLayout(false);
 
         }
