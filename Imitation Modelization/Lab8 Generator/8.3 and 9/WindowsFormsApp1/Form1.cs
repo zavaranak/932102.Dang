@@ -101,12 +101,12 @@ namespace WindowsFormsApp1
             {
                 chi1 += Math.Pow(dataset[i] - avarage, 2) / avarage;
             }
-            chiBox.Text = chi1.ToString();
+            chiBox.Text = chi1.ToString("F2");
             for (int i = chiCriteria.Count - 1; i >= 0; i--)
             {
                 if (chi1 > chiCriteria[i].value)
                 {
-                    chiBox.Text += ">" + chiCriteria[i].value.ToString() + " is True";
+                    chiBox.Text += ">" + chiCriteria[i].value.ToString("F2") + " is True with a= " + chiCriteria[i].error.ToString();
                     done = true;
                     break;
                 }

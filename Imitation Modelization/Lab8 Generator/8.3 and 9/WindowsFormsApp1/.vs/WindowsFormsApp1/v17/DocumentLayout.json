@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3\\WindowsFormsApp1\\",
+  "WorkspaceRootPath": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3 and 9\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF25D2FF-1464-4514-96E0-BCD86A59F24E}|WindowsFormsApp1.csproj|D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3\\WindowsFormsApp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FF25D2FF-1464-4514-96E0-BCD86A59F24E}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FF25D2FF-1464-4514-96E0-BCD86A59F24E}|WindowsFormsApp1.csproj|D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3 and 9\\WindowsFormsApp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF25D2FF-1464-4514-96E0-BCD86A59F24E}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF25D2FF-1464-4514-96E0-BCD86A59F24E}|WindowsFormsApp1.csproj|d:\\laboratories\\danggit\\imitation modelization\\lab8 generator\\8.3\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF25D2FF-1464-4514-96E0-BCD86A59F24E}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF25D2FF-1464-4514-96E0-BCD86A59F24E}|WindowsFormsApp1.csproj|d:\\laboratories\\danggit\\imitation modelization\\lab8 generator\\8.3 and 9\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FF25D2FF-1464-4514-96E0-BCD86A59F24E}|WindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|WindowsFormsApp1||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
@@ -21,15 +21,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "WindowsFormsApp1",
-              "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+              "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3 and 9\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
               "RelativeDocumentMoniker": "WindowsFormsApp1.csproj",
-              "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+              "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3 and 9\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
               "RelativeToolTip": "WindowsFormsApp1.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-04-24T11:23:30.165Z",
@@ -37,11 +37,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3\\WindowsFormsApp1\\Form1.cs",
+              "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3 and 9\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3\\WindowsFormsApp1\\Form1.cs [Design]",
+              "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3 and 9\\WindowsFormsApp1\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T09:48:42.148Z",
@@ -49,13 +49,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3\\WindowsFormsApp1\\Form1.cs",
+              "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3 and 9\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3\\WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab8 Generator\\8.3 and 9\\WindowsFormsApp1\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAF8AAAAhAAAA",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAIwGwAAABfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T10:04:34.032Z",
               "EditorCaption": ""
