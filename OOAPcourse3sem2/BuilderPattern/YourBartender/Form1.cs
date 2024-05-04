@@ -1,5 +1,3 @@
-
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using WinFormsLabel = System.Windows.Forms.Label;
 
 namespace YourBartender
@@ -8,6 +6,7 @@ namespace YourBartender
     {
         //private DrinkBuilder bartender;
         ComboBox myChoice = new ComboBox();
+        List<Drink> servedDrinks = new List<Drink>();
         private string selectedItem = "";
 
         public Form1()
@@ -51,11 +50,12 @@ namespace YourBartender
             myChoice.Size = new Size(121, 23);
             myChoice.Visible = false;
             this.Controls.Add(myChoice);
+            LauchingWithObjectValue();
             //Launching();
-            LauchingWithoutPattern();
+            //LauchingWithoutPattern();
         }
 
-        public void Launching() ///Director
+        /*public void LaunchingWithStrategy() ///Director
         {
             List<string> extras = new List<string>();
             List<string> fruits = new List<string>();
@@ -164,9 +164,195 @@ namespace YourBartender
                 {
                     KeepProcessOn();
                 }
-            }*/
-        }
+            }
+        }*/
 
+        public void LauchingWithObjectValue()
+        {
+            List<string> product = new List<string>();
+            List<List<string>> tempProducts = new List<List<string>>();
+            List<string> extras = new List<string>();
+            List<string> fruits = new List<string>();
+            List<string> syrups = new List<string>();
+            List<string> liqueurs = new List<string>();
+
+            labelInfo2.Text = "";
+
+            List<List<string>> ingredients = new List<List<string>>();
+
+            foreach (object item in checkedListExtra.CheckedItems)
+            {
+                extras.Add((string)item);
+            }
+
+            foreach (object item in checkedListFruits.CheckedItems)
+            {
+                fruits.Add((string)item);
+            }
+
+            foreach (object item in checkedListSyrup.CheckedItems)
+            {
+                syrups.Add((string)item);
+            }
+
+            foreach (object item in checkedListLiqueur.CheckedItems)
+            {
+                liqueurs.Add((string)item);
+            }
+
+            ingredients.Add(fruits);
+            ingredients.Add(syrups);
+            ingredients.Add(extras);
+            ingredients.Add(liqueurs);
+            string tempIMG = @"cocktailIMG/inProcessIMG.jpg";
+            label3.Visible = true;
+            labelInfoBox.Location = new Point(36, 207);
+            labelInfoBox.BackColor = SystemColors.Window;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = true;
+            pictureBox2.Image = Image.FromFile(tempIMG);
+            labelInfoBox.AutoSize = false;
+            labelInfoBox.Width = 300;
+            labelInfoBox.Height = 150;
+            string baseSpirit = (string)comboBoxAlcohol.SelectedItem;
+            ParamForStrategy param = new ParamForStrategy();
+            param.labels = new List<WinFormsLabel> { label1, label3, labelInfo2, labelInfoBox };
+            param.pictureBoxs = new List<PictureBox> { pictureBox2 };
+            param.comboBox = myChoice;
+            param.comboBox.SelectionChangeCommitted += ((sender, args) =>
+            {
+                this.Controls.Remove(myChoice);
+            });
+            switch (baseSpirit)
+            {
+                case "Vodka shot":
+                case "Tequila shot":
+                case "Rum shot":
+                case "Whiskey shot":
+                case "Gin shot":
+                    product = dataShot.Find(x => x[0] == baseSpirit);
+                    param.labels[0].ForeColor = SystemColors.HotTrack;
+                    param.labels[0].Text = "Your order:";
+                    param.labels[1].Text = "Your drink is ready!";
+                    param.labels[2].Text = product[0];
+                    param.labels[3].Text = "Base spirit: " + baseSpirit + "\r\nWise choice, getting your order!";
+                    param.pictureBoxs[0].Image = Image.FromFile(@"cocktailIMG/" + product[6]);
+                    Drink shot = new Drink(product[1], product[2], product[3], product[4], product[5], product[6], product[0]);
+                    servedDrinks.Add(shot);
+                    listView1.Items.Add(shot.ToString());
+                    break;
+                case "Vodka":
+                case "Gin":
+                case "Rum":
+                    var canMake = 0;
+                    var tempProduct = new List<string>();
+                    tempProducts.Clear();
+                    foreach (var row in dataCocktail)
+                    {
+                        if (row.Contains(baseSpirit))
+                        {
+                            bool checkextra = false;
+                            bool checksyrups = false;
+                            bool checkfruits = false;
+                            bool checkliqueurs = false;
+                            if (row[4] == "")
+                                checkextra = true;
+                            else
+                                foreach (string item in extras)
+                                    if (row[4].Contains(item))
+                                        checkextra = true;
+                            if (row[2] == "")
+                                checkfruits = true;
+                            else
+                                foreach (string item in fruits)
+                                    if (row[2].Contains(item))
+                                        checkfruits = true;
+                            if (row[3] == "")
+                                checksyrups = true;
+                            else
+                                foreach (string item in syrups)
+                                    if (row[3].Contains(item))
+                                        checksyrups = true;
+                            if (row[5] == "")
+                                checkliqueurs = true;
+                            else
+                                foreach (string item in liqueurs)
+                                    if (row[5].Contains(item))
+                                        checkliqueurs = true;
+                            if (checkextra && checkfruits && checksyrups && checkliqueurs)
+                            {
+                                tempProduct = row;
+                                canMake++;
+                                tempProducts.Add(row);
+                            }
+                        }
+                    }
+
+                    if (canMake == 1) product = tempProduct;
+                    else if (canMake > 1) product = null;
+                    if (tempProducts.Any())
+                    {
+                        if (tempProducts.Count == 1)
+                        {
+                            param.labels[0].ForeColor = SystemColors.HotTrack;
+                            param.labels[0].Text = "Your order:";
+                            param.labels[1].Text = "Your drink is ready!";
+                            param.labels[2].Text = product[0];
+                            param.labels[3].Text = "Base spirit: " + baseSpirit
+                                                                   + "\r\nWise choice, getting your order!";
+                            param.pictureBoxs[0].Image = Image.FromFile(@"cocktailIMG/" + product[6]);
+                            Drink cocktail = new Drink(product[1], product[2], product[3], product[4], product[5], product[6], product[0]);
+                            servedDrinks.Add(cocktail);
+                            listView1.Items.Add(cocktail.Name);
+                        }
+
+                        if (tempProducts.Count > 1)
+                        {
+                            this.Controls.Add(myChoice);
+                            param.labels[0].ForeColor = Color.Red;
+                            param.labels[0].Text = "Please choose one\r\nfrom these options";
+                            param.comboBox.Visible = true;
+
+                            if (tempProducts != null)
+                                foreach (var item in tempProducts)
+                                {
+                                    param.comboBox.Items.Add(item[0]);
+                                    param.labels[2].Text += item[0] + "\r\n";
+                                }
+
+                            param.comboBox.SelectionChangeCommitted += (sender, args) =>
+                            {
+                                string selectedItem;
+                                param.comboBox = (ComboBox)sender; // Cast sender to ComboBox
+                                selectedItem = (string)param.comboBox.SelectedItem; // Get the selected item
+                                param.labels[0].ForeColor = SystemColors.HotTrack;
+                                param.labels[0].Text = "Your order:";
+                                param.labels[2].Text = selectedItem;
+                                param.labels[1].Text = "Your drink is ready!";
+                                var final = tempProducts.Find(x => x[0] == selectedItem);
+                                param.pictureBoxs[0].Image = Image.FromFile(@"cocktailIMG/" + final[6]);
+                                Drink cocktail = new Drink(final[1], final[2], final[3], final[4], final[5], final[6], final[0]);
+                                servedDrinks.Add(cocktail);
+                                listView1.Items.Add(cocktail.Name);
+                            }
+                                ;
+                            param.labels[1].Text = "Now in process...";
+                        }
+                    }
+                    break;
+                case "Beer":
+                    param.labels[0].ForeColor = SystemColors.HotTrack;
+                    param.labels[0].Text = "Your order:";
+                    param.labels[1].Text = "Your drink is ready!";
+                    param.labels[2].Text = "Beer for the mood";
+                    param.labels[3].Text = "BEER" + "\r\nWise choice, getting your order!";
+                    param.pictureBoxs[0].Image = Image.FromFile(@"cocktailIMG/beer.jpeg");
+                    Drink beer = new Drink("", "", "", "", "", "", "Beer");
+                    servedDrinks.Add(beer);
+                    listView1.Items.Add(beer.Name);
+                    break;
+            }
+        }
         public void LauchingWithoutPattern()
         {
             List<string> product = new List<string>();
@@ -408,7 +594,7 @@ namespace YourBartender
             labelInfoBox.AutoSize = true;
             labelInfoBox.Text = "Ready";
             labelInfoBox.BackColor = SystemColors.ButtonHighlight;
-            labelInfoBox.Location = new Point(369, 167);
+            labelInfoBox.Location = new Point(549, 207);
             label1.Text = "";
             myChoice.Items.Clear();
             this.Controls.Remove(myChoice);
@@ -422,6 +608,50 @@ namespace YourBartender
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                var firstSelectedItem = listView1.SelectedItems[0];
+                int index = firstSelectedItem.Index;
+
+                Console.WriteLine(servedDrinks[index]);
+                Console.WriteLine(servedDrinks[index].Fruit);
+                Console.WriteLine(servedDrinks[index].Syrup);
+                Console.WriteLine(servedDrinks[index].Extra);
+                Console.WriteLine(servedDrinks[index].Liqueur);
+
+            }
+
+        }
+
+    }
+
+    public struct Drink
+    {
+        public string BaseSpririt { get; }
+        public string Extra { get; }
+        public string Syrup { get; }
+        public string Fruit { get; }
+        public string Liqueur { get; }
+        public string Name { get; }
+        public string ToCustomer { get; }
+        public Drink(string bs, string fruit, string syrup, string extra, string liqueur, string toCustomer, string name)
+        {
+            BaseSpririt = bs;
+            Extra = extra;
+            Fruit = fruit;
+            Liqueur = liqueur;
+            Syrup = syrup;
+            Name = name;
+            ToCustomer = toCustomer;
+        }
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
+
     }
 
     internal class ParamForStrategy
@@ -431,6 +661,7 @@ namespace YourBartender
         public ComboBox comboBox;
     }
 
+    /*
     internal class Bundler
     {
         public List<List<string>> data;
