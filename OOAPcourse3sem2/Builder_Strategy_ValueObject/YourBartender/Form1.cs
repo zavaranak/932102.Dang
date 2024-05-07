@@ -1,3 +1,6 @@
+using System.Configuration;
+using System.Diagnostics.CodeAnalysis;
+using System.Xml.Linq;
 using WinFormsLabel = System.Windows.Forms.Label;
 
 namespace YourBartender
@@ -635,6 +638,36 @@ namespace YourBartender
 
     }
 
+    /*public struct Order
+    {
+        public int orderID { get; }
+        public List<Drink> drinks { get; }
+        public Order(List<Drink> items, int id)
+        {
+            orderID = id;
+            drinks = new List<Drink>();
+            foreach (var item in items)
+            {
+                drinks.Add(item);
+            }
+        }
+        public override string ToString()
+        {
+            string temp = "ID: " + orderID.ToString() + "|Items: " + drinks.Count().ToString();
+            return temp;
+        }
+        public override bool Equals([NotNullWhen(true)] object? obj)
+        {
+            if (obj is null || obj.GetType() != this.GetType())
+            {
+                return false;
+            }
+            var other = (Order)obj;
+            bool check = false;
+            return check;
+               
+        }
+    }*/
     public struct Drink
     {
         public string TimeIssue { get; }
@@ -661,6 +694,22 @@ namespace YourBartender
         public override string ToString()
         {
             return $"{Name}";
+        }
+        public override bool Equals([NotNullWhen(true)] object? obj)
+        {
+            if (obj is null || obj.GetType() != this.GetType())
+            {
+                return false;
+            }
+            var other = (Drink)obj;
+            return Name == other.Name &&
+                   Type == other.Type &&
+                   BaseSpririt == other.BaseSpririt &&
+                   Extra == other.Extra &&
+                   Syrup == other.Syrup &&
+                   Fruit == other.Fruit &&
+                   Liqueur == other.Liqueur &&
+                   ToCustomer == other.ToCustomer;
         }
 
     }

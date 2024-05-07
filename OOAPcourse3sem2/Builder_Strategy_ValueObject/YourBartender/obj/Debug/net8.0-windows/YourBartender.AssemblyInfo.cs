@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YourBartender")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cf03535f96bac41d8993e22249c61474ef6b6df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8aedfecf182bd942f126ba9cdb68762182ac05da")]
 [assembly: System.Reflection.AssemblyProductAttribute("YourBartender")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YourBartender")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
