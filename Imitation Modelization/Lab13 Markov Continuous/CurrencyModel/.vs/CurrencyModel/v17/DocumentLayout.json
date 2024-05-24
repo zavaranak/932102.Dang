@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab13 Markov Continuous\\CurrencyModel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{235DE8B4-9EB5-46F9-A420-F0281BB334B1}|CurrencyModel.csproj|d:\\laboratories\\danggit\\imitation modelization\\lab13 markov continuous\\currencymodel\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{235DE8B4-9EB5-46F9-A420-F0281BB334B1}|CurrencyModel.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{235DE8B4-9EB5-46F9-A420-F0281BB334B1}|CurrencyModel.csproj|D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab13 Markov Continuous\\CurrencyModel\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{235DE8B4-9EB5-46F9-A420-F0281BB334B1}|CurrencyModel.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{235DE8B4-9EB5-46F9-A420-F0281BB334B1}|CurrencyModel.csproj|D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab13 Markov Continuous\\CurrencyModel\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{235DE8B4-9EB5-46F9-A420-F0281BB334B1}|CurrencyModel.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab13 Markov Continuous\\CurrencyModel\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab13 Markov Continuous\\CurrencyModel\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T06:14:00.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab13 Markov Continuous\\CurrencyModel\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab13 Markov Continuous\\CurrencyModel\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowCIAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T06:09:56.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab13 Markov Continuous\\CurrencyModel\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab13 Markov Continuous\\CurrencyModel\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T06:02:37.159Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

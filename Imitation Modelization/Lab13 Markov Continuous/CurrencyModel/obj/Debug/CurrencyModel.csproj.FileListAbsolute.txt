@@ -1,0 +1,20 @@
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\bin\Debug\CurrencyModel.exe.config
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\bin\Debug\CurrencyModel.exe
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\bin\Debug\CurrencyModel.pdb
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\obj\Debug\CurrencyModel.csproj.AssemblyReference.cache
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\obj\Debug\CurrencyModel.Form1.resources
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\obj\Debug\CurrencyModel.Properties.Resources.resources
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\obj\Debug\CurrencyModel.csproj.GenerateResource.cache
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\obj\Debug\CurrencyModel.csproj.CoreCompileInputs.cache
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\obj\Debug\CurrencyModel.exe
+D:\Laboratories\DangGit\Imitation Modelization\Currency(Lab2)\CurrencyModel\obj\Debug\CurrencyModel.pdb
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\bin\Debug\CurrencyModel.exe.config
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\bin\Debug\CurrencyModel.exe
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\bin\Debug\CurrencyModel.pdb
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\obj\Debug\CurrencyModel.csproj.AssemblyReference.cache
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\obj\Debug\CurrencyModel.Form1.resources
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\obj\Debug\CurrencyModel.Properties.Resources.resources
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\obj\Debug\CurrencyModel.csproj.GenerateResource.cache
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\obj\Debug\CurrencyModel.csproj.CoreCompileInputs.cache
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\obj\Debug\CurrencyModel.exe
+D:\Laboratories\DangGit\Imitation Modelization\Lab13 Markov Continuous\CurrencyModel\obj\Debug\CurrencyModel.pdb
