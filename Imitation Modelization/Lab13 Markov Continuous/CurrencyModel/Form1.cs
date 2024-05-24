@@ -17,9 +17,9 @@ namespace CurrencyModel
         {
             InitializeComponent();
         }
-
+        int seed = Environment.TickCount;
         const double k = 0.02;
-        Random rnd = new Random();
+        Random rand;
         bool start = false;
         int day = 0;
         double[] price = { 0,0,0,0 };
@@ -29,12 +29,17 @@ namespace CurrencyModel
         {
             if (!start)
             {
+                rand = new Random(seed);
                 currencies = new BrownianMotionCurrency[4];
                 price[0] = (double)edUSD.Value;
                 price[1] = (double)edEuro.Value;
                 price[2] = (double)edFranc.Value;
-                price[3] = (double)edPound.Value;
-                for (int i = 0; i < 4; i++) currencies[i] = new BrownianMotionCurrency(price[i],0,rnd.NextDouble());
+                price[3] = (double)edPound.Value; 
+                
+                for (int i = 0; i < 4; i++)
+                {
+                    currencies[i] = new BrownianMotionCurrency(price[i], 0, rand.NextDouble()*2, rand); 
+                }
                 start = true;
                 timer1.Start();
             }
@@ -61,12 +66,12 @@ namespace CurrencyModel
             private readonly double volatility;
             private readonly Random random;
 
-            public BrownianMotionCurrency(double initialValue, double drift, double volatility)
+            public BrownianMotionCurrency(double initialValue, double drift, double volatility, Random rand)
             {
                 this.initialValue = initialValue;
                 this.drift = drift;       
                 this.volatility = volatility;
-                this.random = new Random();
+                this.random = rand;
             }
 
             public double SimulateValue()
