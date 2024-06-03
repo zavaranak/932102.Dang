@@ -1,0 +1,10 @@
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\obj\Debug\Agent Modelization.csproj.AssemblyReference.cache
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\obj\Debug\Agent_Modelization.Properties.Resources.resources
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\obj\Debug\Agent Modelization.csproj.GenerateResource.cache
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\obj\Debug\Agent Modelization.csproj.CoreCompileInputs.cache
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\bin\Debug\Agent Modelization.exe.config
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\bin\Debug\Agent Modelization.exe
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\bin\Debug\Agent Modelization.pdb
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\obj\Debug\Agent_Modelization.Bank.resources
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\obj\Debug\Agent Modelization.exe
+D:\Laboratories\DangGit\Imitation Modelization\Lab14 Agent Model\Agent Modelization\obj\Debug\Agent Modelization.pdb
