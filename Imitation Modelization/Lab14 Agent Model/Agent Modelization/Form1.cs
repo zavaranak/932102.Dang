@@ -127,6 +127,11 @@ namespace Agent_Modelization
             }
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void timer3_Tick(object sender, EventArgs e)
         {
             if (VTBBranch.allAgentsBusy)

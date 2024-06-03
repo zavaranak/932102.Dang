@@ -32,12 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.labelClientArrival = new System.Windows.Forms.Label();
-            this.showWorkShift = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.showAvailableAgents = new System.Windows.Forms.Label();
             this.inputNumberOfAgents = new System.Windows.Forms.NumericUpDown();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -47,24 +45,26 @@
             this.showServedClients = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.showWorkShift = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonStop = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonStart = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNumberOfAgents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,11 +73,8 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.labelClientArrival);
-            this.panel1.Controls.Add(this.showWorkShift);
             this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.showAvailableAgents);
             this.panel1.Controls.Add(this.inputNumberOfAgents);
             this.panel1.Controls.Add(this.pictureBox5);
@@ -89,17 +86,18 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(26, 94);
+            this.panel1.Location = new System.Drawing.Point(32, 99);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(596, 488);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(269, 236);
+            this.label5.Location = new System.Drawing.Point(262, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 23);
             this.label5.TabIndex = 14;
@@ -116,6 +114,16 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "(available)";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Agent_Modelization.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Agent_Modelization.Properties.Resources.agent;
@@ -125,17 +133,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(269, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "(hours)";
             // 
             // labelClientArrival
             // 
@@ -148,17 +145,6 @@
             this.labelClientArrival.TabIndex = 15;
             this.labelClientArrival.Text = "Client arrives";
             // 
-            // showWorkShift
-            // 
-            this.showWorkShift.AutoSize = true;
-            this.showWorkShift.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showWorkShift.ForeColor = System.Drawing.Color.Transparent;
-            this.showWorkShift.Location = new System.Drawing.Point(288, 69);
-            this.showWorkShift.Name = "showWorkShift";
-            this.showWorkShift.Size = new System.Drawing.Size(19, 23);
-            this.showWorkShift.TabIndex = 10;
-            this.showWorkShift.Text = "0";
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Agent_Modelization.Properties.Resources.newclient;
@@ -168,16 +154,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 13;
             this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Agent_Modelization.Properties.Resources.clock;
-            this.pictureBox3.Location = new System.Drawing.Point(280, 26);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
             // 
             // showAvailableAgents
             // 
@@ -292,17 +268,52 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Served clients";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(533, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 23);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "(hours)";
+            // 
+            // showWorkShift
+            // 
+            this.showWorkShift.AutoSize = true;
+            this.showWorkShift.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showWorkShift.ForeColor = System.Drawing.Color.Transparent;
+            this.showWorkShift.Location = new System.Drawing.Point(579, 10);
+            this.showWorkShift.Name = "showWorkShift";
+            this.showWorkShift.Size = new System.Drawing.Size(19, 23);
+            this.showWorkShift.TabIndex = 10;
+            this.showWorkShift.Text = "0";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Agent_Modelization.Properties.Resources.clock;
+            this.pictureBox3.Location = new System.Drawing.Point(534, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(130)))));
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.buttonStop);
             this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.buttonStart);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.showWorkShift);
             this.panel2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel2.Location = new System.Drawing.Point(-1, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(644, 94);
+            this.panel2.Size = new System.Drawing.Size(662, 95);
             this.panel2.TabIndex = 1;
             // 
             // label6
@@ -330,16 +341,6 @@
             this.buttonStop.Text = "CLOSE";
             this.buttonStop.UseVisualStyleBackColor = false;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Agent_Modelization.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // buttonStart
             // 
@@ -380,23 +381,26 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(642, 580);
+            this.BackgroundImage = global::Agent_Modelization.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(659, 625);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Bank";
             this.Text = "Bank";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputNumberOfAgents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

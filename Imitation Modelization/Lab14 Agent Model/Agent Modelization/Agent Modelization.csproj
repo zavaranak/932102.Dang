@@ -110,5 +110,8 @@
   <ItemGroup>
     <None Include="assets\animation.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
