@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab14 Agent Model\\Agent Modelization\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16857EF3-9C0B-4067-8CBA-D8E4A5F11B51}|Agent Modelization.csproj|d:\\laboratories\\danggit\\imitation modelization\\lab14 agent model\\agent modelization\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{16857EF3-9C0B-4067-8CBA-D8E4A5F11B51}|Agent Modelization.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{16857EF3-9C0B-4067-8CBA-D8E4A5F11B51}|Agent Modelization.csproj|D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab14 Agent Model\\Agent Modelization\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16857EF3-9C0B-4067-8CBA-D8E4A5F11B51}|Agent Modelization.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16857EF3-9C0B-4067-8CBA-D8E4A5F11B51}|Agent Modelization.csproj|d:\\laboratories\\danggit\\imitation modelization\\lab14 agent model\\agent modelization\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{16857EF3-9C0B-4067-8CBA-D8E4A5F11B51}|Agent Modelization.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16857EF3-9C0B-4067-8CBA-D8E4A5F11B51}|Agent Modelization.csproj|D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab14 Agent Model\\Agent Modelization\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,13 +34,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab14 Agent Model\\Agent Modelization\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab14 Agent Model\\Agent Modelization\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAYwIMAAAAAAAAA",
+              "ViewState": "AQIAANcAAAAAAAAAAAAqwIMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T09:36:00.71Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T05:16:46.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T05:16:46.295Z"
             },
             {
               "$type": "Document",
@@ -73,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Laboratories\\DangGit\\Imitation Modelization\\Lab14 Agent Model\\Agent Modelization\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
